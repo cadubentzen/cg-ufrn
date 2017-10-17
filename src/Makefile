@@ -7,14 +7,21 @@ EXAMPLES = hello.c  \
 		   clip.c   \
 		   smooth.c \
 		   planet.c \
-		   robot.c
+		   robot.c \
+           light.c
 
 OUTPUTS = $(basename $(EXAMPLES))
 
-all: $(OUTPUTS)
+.PHONY: all clean
 
-%: %.c
+all: $(addprefix bin/,$(basename $(EXAMPLES)))
+
+bin/%: %.c bin
 	$(CC) $< -o $@ $(CFLAGS)
 
 clean:
-	-rm -f $(OUTPUTS)
+	-rm -rf bin
+
+bin:
+	-@mkdir bin
+	
