@@ -8,7 +8,10 @@ EXAMPLES = hello.c  \
 		   smooth.c \
 		   planet.c \
 		   robot.c \
-           light.c
+           light.c \
+		   checker.c \
+		   mipmap.c \
+		   texgen.c
 
 OUTPUTS = $(basename $(EXAMPLES))
 
