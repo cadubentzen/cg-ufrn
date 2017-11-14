@@ -33,6 +33,12 @@ set(EXAMPLE_SOURCES
     "src/checker.c"
     "src/mipmap.c"
     "src/texgen.c"
+    "src/alpha.c"
+    "src/alpha3D.c"
+    "src/aargb.c"
+    "src/aaindex.c"
+    "src/torus.c"
+    "src/list.c"
 )
 
 opengl_examples("${EXAMPLE_SOURCES}")
